@@ -13,8 +13,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [my code](https://github.com/alimassidik210/product-preview-card.git)
+- Live Site URL: [my web](https://product-preview-card-ten-beta.vercel.app/)
 
 ## My process
 
