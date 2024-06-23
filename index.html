@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Product preview card component</title>
+
+    <!-- fonts google Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- fonts google Fraunces -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      :root {
+        --color-Darkcyan: hsl(158, 36%, 37%);
+        --color-VeryDarkcyan: hsl(158, 93%, 5%);
+        --bg-Cream: hsl(30, 38%, 92%);
+        --color-Verydark-blue: hsl(212, 21%, 14%);
+        --color-Darkgrayish-blue: hsl(228, 12%, 48%);
+        --color-White: hsl(0, 0%, 100%);
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        min-height: 100vh;
+        background-color: var(--bg-Cream);
+        font-family: Montserrat, sans-serif;
+        font-size: 14px;
+        display: grid;
+        place-items: center;
+        padding: 1rem;
+      }
+
+      .container {
+        background-color: var(--color-White);
+        display: flex;
+        flex-direction: column;
+        border-radius: 0.5rem;
+        overflow: hidden;
+      }
+
+      .container .img-product {
+        min-height: 250px;
+        width: 100%;
+        background-image: url(./images/image-product-mobile.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+
+      .container .content-product {
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.3rem;
+      }
+
+      .container .content-product p:first-of-type {
+        text-transform: uppercase;
+        letter-spacing: 0.3rem;
+        color: var(--color-Darkgrayish-blue);
+        font-weight: 500;
+      }
+
+      .container .content-product h1 {
+        font-family: Fraunces;
+        color: var(--color-Verydark-blue);
+      }
+
+      .container .content-product p:last-of-type {
+        color: var(--color-Darkgrayish-blue);
+      }
+
+      .container .content-product .price-product {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+      }
+
+      .container .content-product .price-product span:first-of-type {
+        color: var(--color-Darkcyan);
+        font-family: Fraunces;
+        font-size: xx-large;
+        font-weight: bold;
+      }
+
+      .container .content-product .price-product span:last-of-type {
+        color: var(--color-Darkgrayish-blue);
+        text-decoration: line-through;
+      }
+
+      button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        background-color: var(--color-Darkcyan);
+        color: var(--color-White);
+        outline: none;
+        border: none;
+        cursor: pointer;
+        gap: 10px;
+      }
+
+      button:hover {
+        background-color: var(--color-VeryDarkcyan);
+      }
+
+      @media only screen and (min-width: 601px) {
+        .container {
+          display: flex;
+          flex-direction: row;
+          width: 550px;
+        }
+
+        .container .img-product {
+          width: 50%;
+          background-image: url(./images/image-product-desktop.jpg);
+          background-size: cover;
+        }
+
+        .container .content-product {
+          width: 50%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="img-product">
+        <!-- <img src="./images/image-product-mobile.jpg" alt="product photo" /> -->
+      </div>
+      <div class="content-product">
+        <p>Perfume</p>
+        <h1>Gabrielle Essence Eau De Parfum</h1>
+        <p>
+          A floral, solar and voluptuous interpretation composed by Olivier
+          Polge, Perfumer-Creator for the House of CHANEL.
+        </p>
+        <div class="price-product">
+          <span>$149.99</span>
+          <span>$169.99</span>
+        </div>
+        <button>
+          <img src="./images/icon-cart.svg" alt="logo cart" />
+          <span> Add to Cart </span>
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
